@@ -36,6 +36,12 @@ class BusinessContact(BaseContact):
 
 
 def create_contacts(type, quantity):
+    '''
+    Returns list of class BaseContact or BusinessContact instances (depending on argument 'type') 
+    Arguments:
+    type: takes value 'basic' for BaseContact instances or 'work' for BuisnessContact instances
+    quantity: defines quantity of created instances
+    '''
     contacts = []
     fake = Faker("pl_PL")
     if type == 'basic':
